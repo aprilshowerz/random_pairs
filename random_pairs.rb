@@ -1,8 +1,13 @@
+#
 def create_pairs(names)
-	array = []
+	array = [] #creates empty holder array
 	array_paired_names = names.shuffle.each_slice(2)
 	array_paired_names.each do |pairs|
-		if pairs.length == 2
+		if pairs.length == 1
+			
+			array << names
+
+		elsif pairs.length == 2
 		array << pairs
 		else
 			array.last << pairs
